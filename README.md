@@ -7,6 +7,12 @@
   <a href="https://github.com/choidaeyong1231/XMat3D-blog/issues/new"><img src="https://img.shields.io/badge/Q%26A-GitHub_Issues-brightgreen?logo=github&logoColor=white" alt="Ask Question" /></a>
 </p>
 
+<div style="margin: 16px 0;">
+  <a href="https://choidaeyong1231.github.io/XMat3D-blog/downloads/XMat3DAnalyzer_Setup_v1.0.0.exe" download style="display: inline-block; padding: 11px 22px; background-color: #2ea44f; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 12px rgba(46,164,79,0.35);">
+    📥 XMat3D Analyzer v1.0.0 정식 설치 파일 다운로드 (.exe, 22.9MB)
+  </a>
+</div>
+
 ![XMat3D Analyzer Main Overview](images/main_overview.png)
 
 ## 🎬 동작 시연 영상 (Demo Video)
