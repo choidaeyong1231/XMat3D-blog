@@ -8,10 +8,12 @@
 
 <div align="center">
   <video width="100%" controls preload="metadata" style="max-height: 480px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+    <source src="https://choidaeyong1231.github.io/XMat3D-blog/videos/XMat3D_demo.mp4" type="video/mp4">
     <source src="videos/XMat3D_demo.mp4" type="video/mp4">
     브라우저가 HTML5 비디오 재생을 지원하지 않습니다.
   </video>
   <p><em>▲ XMat3D Analyzer 실시간 3D 메쉬 생성, ROI 분석 및 단차 계측 시연 (3분 44초)</em></p>
+  <p><small><a href="https://choidaeyong1231.github.io/XMat3D-blog/videos/XMat3D_demo.mp4" target="_blank">🔗 새 창에서 원본 영상 직접 재생하기</a></small></p>
 </div>
 
 ## 📌 프로젝트 소개
