@@ -3,7 +3,7 @@
 > **2D X-Ray 및 고해상도 단면 영상 기반의 실시간 3D 높이 계측 및 표면 분석 시스템**
 
 <p>
-  <a href="https://choidaeyong1231.github.io/XMat3D-blog"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchoidaeyong1231.github.io%2FXMat3D-blog&count_bg=%23007ACC&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false" alt="Visitors" /></a>
+  <a href="https://choidaeyong1231.github.io/XMat3D-blog"><img src="https://komarev.com/ghpvc/?username=choidaeyong1231-xmat3d&label=Visitors&color=007acc" alt="Visitors" /></a>
   <a href="https://github.com/choidaeyong1231/XMat3D-blog/issues/new"><img src="https://img.shields.io/badge/Q%26A-GitHub_Issues-brightgreen?logo=github&logoColor=white" alt="Ask Question" /></a>
 </p>
 

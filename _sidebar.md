@@ -15,5 +15,5 @@
 
 ---
 <div align="center">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchoidaeyong1231.github.io%2FXMat3D-blog&count_bg=%23007ACC&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false" alt="Visitors" />
+  <img src="https://komarev.com/ghpvc/?username=choidaeyong1231-xmat3d&label=Visitors&color=007acc" alt="Visitors" />
 </div>
