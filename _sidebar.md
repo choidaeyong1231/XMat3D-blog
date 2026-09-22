@@ -7,4 +7,4 @@
   * [3편: 현장 맞춤 기능과 실전 트러블슈팅](03-features-and-troubleshooting.md)
 
 * **외부 링크**
-  * [GitHub Repository](https://github.com/choidaeyong1231/X3DToolProjects)
+  * [GitHub Repository](https://github.com/choidaeyong1231/XMat3D-blog)
