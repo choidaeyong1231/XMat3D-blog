@@ -39,6 +39,18 @@
 2. **독립 모듈화**: 다른 산업용 장비 제어 프로그램에 컴포넌트(DLL)로 쉽게 얹어서 납품할 수 있어야 한다.
 3. **작업자 중심의 실전 워크플로**: 복잡한 3D 모델링 기능 대신, **단차 사칙연산, 평면 기울기 보정, 노이즈 필터링** 등 현장 엔지니어가 매일 쓰는 기능에 집중한다.
 
+### 🎬 실제 구동 영상
+소프트웨어가 실제로 어떻게 ROI를 잡고 실시간으로 3D 메쉬를 돌려보는지 아래 시연 영상에서 확인하실 수 있습니다:
+
+<div align="center">
+  <video width="100%" controls preload="metadata" style="max-height: 480px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+    <source src="https://choidaeyong1231.github.io/XMat3D-blog/videos/XMat3D_demo.mp4" type="video/mp4">
+    <source src="videos/XMat3D_demo.mp4" type="video/mp4">
+    브라우저가 HTML5 비디오 재생을 지원하지 않습니다.
+  </video>
+  <p><small><a href="https://choidaeyong1231.github.io/XMat3D-blog/videos/XMat3D_demo.mp4" target="_blank">🔗 새 창에서 원본 영상 보기</a> | <a href="#/demo-video">🎬 타임라인별 상세 설명 보기</a></small></p>
+</div>
+
 ---
 
 ## 3. 전체 시스템 아키텍처
