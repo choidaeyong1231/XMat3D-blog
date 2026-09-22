@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>XMat3D Analyzer - 로컬 미리보기</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 960px; margin: 40px auto; padding: 0 20px; }
+    nav { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 2px solid #e1e4e8; padding-bottom: 12px; }
+    nav button { background: #f6f8fa; border: 1px solid #d1d5da; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
+    nav button.active { background: #007acc; color: #fff; border-color: #007acc; }
+    .content-section { display: none; }
+    .content-section.active { display: block; }
+    img { max-width: 100%; border: 1px solid #e1e4e8; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin: 16px 0; }
+    pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 13px; }
+    code { font-family: Consolas, monospace; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #e1e4e8; padding: 8px 12px; text-align: left; }
+    th { background: #f6f8fa; }
+    blockquote { border-left: 4px solid #007acc; margin: 0; padding: 8px 16px; background: #f0f7fc; color: #0366d6; }
+  </style>
+</head>
+<body>
+  <h1>🛠️ XMat3D Analyzer 기술 블로그 (로컬 미리보기)</h1>
+  <p style="color: #586069;">GitHub Pages에 배포되면 Docsify 테마로 자동 렌더링되며, 이 파일은 로컬에서 바로 열람하기 위한 페이지입니다.</p>
+  
+  <nav>
+    <button class="active" onclick="showTab('tab-readme')">프로젝트 개요</button>
+    <button onclick="showTab('tab-01')">1편: 왜 만들었나?</button>
+    <button onclick="showTab('tab-02')">2편: OpenTK 고속 렌더링</button>
+    <button onclick="showTab('tab-03')">3편: 현장 디테일 & 버그해결</button>
+  </nav>
+
+  <div id="tab-readme" class="content-section active">
+    <h2>XMat3D Analyzer</h2>
+    <blockquote>2D X-Ray 및 고해상도 단면 영상 기반의 실시간 3D 높이 계측 및 표면 분석 시스템</blockquote>
+    <img src="images/main_overview.png" alt="Main Overview">
+    <h3>📌 프로젝트 소개</h3>
+    <p>기존 고가 3D CT 장비나 무거운 상용 소프트웨어를 도입하지 않고도, 2D 계측 영상(16비트 TIFF 등)에서 관심 영역(ROI)을 지정하는 즉시 실시간 3D 표면 메쉬를 생성하여 정밀 단차, 평면 기울기(Tilt), 노이즈를 직관적으로 분석할 수 있는 산업용 분석 도구입니다.</p>
+    <h3>✨ 주요 기능</h3>
+    <table>
+      <tr><th>기능</th><th>설명</th></tr>
+      <tr><td><b>실시간 3D 메쉬 렌더링</b></td><td>OpenTK(OpenGL VBO)를 활용해 60fps로 고속 3D 시각화</td></tr>
+      <tr><td><b>3점 기반 평면 피팅</b></td><td>3개 기준점으로 평면 방정식을 산출해 표면 기울기 보정</td></tr>
+      <tr><td><b>이상치 제거 필터</b></td><td>지정 임계값 외 스파이크 노이즈를 8방향 이웃 평균값으로 실시간 보간</td></tr>
+      <tr><td><b>실시간 단차 사칙연산</b></td><td>다중 ROI 간 평균 높이를 가져와 덧셈, 뺄셈, 곱셈, 나눗셈 즉시 계산</td></tr>
+    </table>
+  </div>
+
+  <div id="tab-01" class="content-section">
+    <h2>1편: 2D 영상으로 3D 검사기를 만든 이유</h2>
+    <blockquote>"2D 엑스레이 이미지만 봐서는 솔더볼이나 칩이 위로 얼마나 솟았는지 알 수가 없다..."</blockquote>
+    <h3>1. 현장에서 마주한 고민</h3>
+    <p>반도체, 전자 패키징 공정에서 16비트 흑백 X-Ray 이미지는 밝기 정보를 담고 있지만 평면 사진일 뿐입니다. 미세한 단차 차이를 육안으로 파악하기 어렵고, 비싼 3D CT는 전수 검사에 쓰기 어렵습니다.</p>
+    <h3>2. 해결 목표</h3>
+    <p>가볍고 빠른 독립형 C# 분석 툴: 2D 화면에서 ROI를 그리는 순간 0.5초 안에 3D 메쉬 생성, 실시간 단차 연산 및 평면 기울기 보정.</p>
+  </div>
+
+  <div id="tab-02" class="content-section">
+    <h2>2편: OpenTK 고속 메쉬 렌더링과 단차 분석</h2>
+    <blockquote>"수십만 개의 3D 포인트를 C# WinForms 위에서 부드럽게 돌리려면 어떻게 해야 할까?"</blockquote>
+    <h3>OpenTK VBO 고속 렌더링</h3>
+    <p>GPU 메모리에 정점 버퍼(VBO)를 올려두고 60fps 이상으로 실시간 회전/줌 처리. Phong Shading과 높이별 레인보우 컬러맵 적용.</p>
+    <h3>3점 기반 평면 피팅 (Plane Fitting)</h3>
+    <p>측정 부품이 기울어져 있을 때 3개 점을 클릭하면 외적(Cross Product)으로 평면 방정식을 풀어서 전체 표면의 기울기를 완벽히 보정.</p>
+  </div>
+
+  <div id="tab-03" class="content-section">
+    <h2>3편: 현장 맞춤 기능과 실전 트러블슈팅</h2>
+    <blockquote>"소프트웨어의 80%는 기능 개발이지만, 나머지 20%의 현장 디테일이 진짜 생명력을 만든다."</blockquote>
+    <img src="images/view2d_filter.png" alt="Outlier Filter">
+    <h3>1. 이상치(Outlier) 제거 필터 & [Refresh] 버튼</h3>
+    <p>스파이크 노이즈를 8방향 이웃 평균값으로 보간. 수치 조절 후 즉시 3D 화면을 재계산하는 Refresh 버튼 추가.</p>
+    <h3>2. PlaneList 인덱스 초과 예외 해결 (방어적 프로그래밍)</h3>
+    <p>기준점이 3개 미만인 구버전 파일 로드 시 크래시를 방지하기 위해 <code>workItem.PlaneList.Count >= 3</code> 사전 검증 로직 추가.</p>
+    <h3>3. 작업 이력(Work Item) 개별 삭제 기능</h3>
+    <p>Delete 키 및 우클릭 메뉴를 통한 안전한 삭제와 2D 오버레이 뷰 즉시 동기화.</p>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

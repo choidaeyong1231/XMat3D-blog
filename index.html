@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>XMat3DAnalyzer 엔지니어링 개발기</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="2D 영상 기반 실시간 3D 높이 계측 및 분석 툴 개발 일지">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+  <style>
+    :root {
+      --theme-color: #007acc;
+    }
+    .sidebar-nav strong {
+      color: #333;
+    }
+    .markdown-section img {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin: 16px 0;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">로딩 중...</div>
+  <script>
+    window.$docsify = {
+      name: 'XMat3D Analyzer',
+      repo: 'https://github.com/choidaeyong1231/X3DToolProjects',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '검색어를 입력하세요',
+        noData: '검색 결과가 없습니다',
+        depth: 4
+      },
+      copyCode: {
+        buttonText: '코드 복사',
+        errorText: '실패',
+        successText: '복사됨'
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- Prism Syntax Highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
+</body>
+</html>
