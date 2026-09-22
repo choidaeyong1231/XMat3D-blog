@@ -8,7 +8,7 @@
 </p>
 
 <div style="margin: 16px 0;">
-  <a href="https://choidaeyong1231.github.io/XMat3D-blog/downloads/XMat3DAnalyzer_Setup_v1.0.0.exe" download style="display: inline-block; padding: 11px 22px; background-color: #2ea44f; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 12px rgba(46,164,79,0.35);">
+  <a href="https://raw.githubusercontent.com/choidaeyong1231/XMat3D-blog/main/downloads/XMat3DAnalyzer_Setup_v1.0.0.exe" download style="display: inline-block; padding: 11px 22px; background-color: #2ea44f; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 12px rgba(46,164,79,0.35);">
     📥 XMat3D Analyzer v1.0.0 정식 설치 파일 다운로드 (.exe, 22.9MB)
   </a>
 </div>

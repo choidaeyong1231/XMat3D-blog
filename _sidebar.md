@@ -1,7 +1,7 @@
 * **소개**
   * [프로젝트 개요](README.md)
   * [🎬 동작 시연 영상](demo-video.md)
-  * [📥 설치 파일 다운로드](https://choidaeyong1231.github.io/XMat3D-blog/downloads/XMat3DAnalyzer_Setup_v1.0.0.exe)
+  * [📥 설치 파일 다운로드](https://raw.githubusercontent.com/choidaeyong1231/XMat3D-blog/main/downloads/XMat3DAnalyzer_Setup_v1.0.0.exe)
 
 * **실전 개발기 (Tech Blog)**
   * [1편: 2D 영상으로 3D 검사기를 만든 이유](01-why-we-build.md)
