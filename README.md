@@ -4,6 +4,16 @@
 
 ![XMat3D Analyzer Main Overview](images/main_overview.png)
 
+## 🎬 동작 시연 영상 (Demo Video)
+
+<div align="center">
+  <video width="100%" controls preload="metadata" style="max-height: 480px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+    <source src="videos/XMat3D_demo.mp4" type="video/mp4">
+    브라우저가 HTML5 비디오 재생을 지원하지 않습니다.
+  </video>
+  <p><em>▲ XMat3D Analyzer 실시간 3D 메쉬 생성, ROI 분석 및 단차 계측 시연 (3분 44초)</em></p>
+</div>
+
 ## 📌 프로젝트 소개
 **XMat3D Analyzer**는 반도체, 전자 패키징, 배터리 및 정밀 부품 검사 현장에서 사용되는 산업용 분석 도구입니다.
 
