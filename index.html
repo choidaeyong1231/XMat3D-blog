@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset=<meta name="google-site-verification" content="3y76dpq1i8gY0v4YGsD0ByQfdgfIk4WkrsbVtwe-wKw" />"UTF-8">
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="3y76dpq1i8gY0v4YGsD0ByQfdgfIk4WkrsbVtwe-wKw" />
   <title>XMat3DAnalyzer 엔지니어링 개발기</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="2D 영상 기반 실시간 3D 높이 계측 및 분석 툴 개발 일지">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="canonical" href="https://choidaeyong1231.github.io/XMat3D-blog/">
+  
   <!-- Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
@@ -35,13 +38,24 @@
       name: 'XMat3D Analyzer',
       repo: 'https://github.com/choidaeyong1231/XMat3D-blog',
       loadSidebar: true,
+      loadNavbar: true,
+      nameLink: {
+        '/en/': '#/en/',
+        '/': '#/'
+      },
       subMaxLevel: 3,
       auto2top: true,
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: '검색어를 입력하세요',
-        noData: '검색 결과가 없습니다',
+        placeholder: {
+          '/en/': 'Type to search...',
+          '/': '검색어를 입력하세요...'
+        },
+        noData: {
+          '/en/': 'No Results found.',
+          '/': '검색 결과가 없습니다.'
+        },
         depth: 4
       },
       copyCode: {
